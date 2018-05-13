@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Hearthstone Gallery</title>
+</head>
+
+<body>
+
+  <!-- ShowCase -->
+  <header id="title-header" class="showCase">
+    <div class="bg-image"></div>
+    <div class="header-content">
+      <h1>Hearthstone Gallery</h1>
+      <p>A Website for Hearthstone Card information & Description</p>
+      <input id="search_card" type="text" name="search" placeholder="Search by card name" class="search_box" value="">
+    </div>
+  </header>
+  <!-- End of Showcase -->
+  <div id="filter-wrap" class="filter-wrapp">
+    <div id="class-container">
+      <img id="druid_btn" src="uploads\icons\Icon_Druid.png" title="Druid" class="filterItem" alt="">
+      <img id="hunter_btn" src="uploads\icons\Icon_Hunter.png" title="Hunter" class="filterItem" alt="">
+      <img id="mage_btn" src="uploads\icons\Icon_Mage.png" title="Mage" class="filterItem" alt="">
+      <img id="paladin_btn" src="uploads\icons\Icon_Paladin.png" title="Paladin" class="filterItem" alt="">
+      <img id="priest_btn" src="uploads\icons\Icon_Priest.png" title="Priest" class="filterItem" alt="">
+      <img id="rogue_btn" src="uploads\icons\Icon_Rogue.png" title="Rogue" class="filterItem" alt="">
+      <img id="shaman_btn" src="uploads\icons\Icon_Shaman.png" title="Shaman" class="filterItem" alt="">
+      <img id="warlock_btn" src="uploads\icons\Icon_Warlock.png" title="Warlock" class="filterItem" alt="">
+      <img id="warrior_btn" src="uploads\icons\Icon_Warrior.png" title="Warrior" class="filterItem" alt="">
+      <img id="neutral_btn" src="uploads\icons\Icon_Neutral.png" title="Neutral" style="width: 51px; height:51px;" class="filterItem" alt="">
+    </div>
+    <div id="mana_rarity_container" class="mana_rarity">
+      <div id="mana_container" style="margin:10px;">
+        <img id="0_mana" src="uploads\icons\0_mana_crystal.png" class="mana_icon filterItem" alt="">
+        <img id="1_mana" src="uploads\icons\1_mana_crystal.png" class="mana_icon filterItem" alt="">
+        <img id="2_mana" src="uploads\icons\2_mana_crystal.png" class="mana_icon filterItem" alt="">
+        <img id="3_mana" src="uploads\icons\3_mana_crystal.png" class="mana_icon filterItem" alt="">
+        <img id="4_mana" src="uploads\icons\4_mana_crystal.png" class="mana_icon filterItem" alt="">
+        <img id="5_mana" src="uploads\icons\5_mana_crystal.png" class="mana_icon filterItem" alt="">
+        <img id="6_mana" src="uploads\icons\6_mana_crystal.png" class="mana_icon filterItem" alt="">
+        <img id="7_mana" src="uploads\icons\7+_mana_crystal.png" class="mana_icon filterItem" alt="">
+      </div>
+
+      <div id="rarity_container" style="margin:10px;">
+        <img id="common_gem" src="uploads\icons\rarity_gem_common.png" title="Common" class="rarity_icon filterItem" alt="">
+        <img id="rare_gem" src="uploads\icons\rarity_gem_rare.png" title="Rare" class="rarity_icon filterItem" alt="">
+        <img id="epic_gem" src="uploads\icons\rarity_gem_epic.png" title="Epic" class="rarity_icon filterItem" alt="">
+        <img id="legendary_gem" src="uploads\icons\rarity_gem_legendary.png" title="Legendary" class="rarity_icon filterItem" alt="">
+      </div>
+    </div>
+
+    <div id="format_container" class="format_sets">
+      <div class="">
+        <select id="sets" class="sets_container">
+          <option value="" >All Sets</option>
+          <option value="GILNEAS">Witchwood</option>
+          <option value="LOOTAPALOOZA">Kobolds</option>
+          <option value="ICECROWN">Frozen Throne</option>
+          <option value="UNGORO">Un'Goro</option>
+          <option value="GANGS">Gadgetzan</option>
+          <option value="KARA">Karazhan</option>
+          <option value="OG">Old Gods</option>
+          <option value="LOE">League of Explorers</option>
+          <option value="TGT">Grad Tournament</option>
+          <option value="BRM">Blackrock Mountain</option>
+          <option value="NAXX">Naxxramass</option>
+          <option value="GVG">Goblins vs Gnoms</option>
+          <option value="HOF">Hall of Fame</option>
+          <option value="EXPERT1">Classic</option>
+          <option value="CORE">Basic</option>
+        </select>
+      </div>
+
+    </div>
+  </div>
+  <div class="btn-container">
+    <input id="reset_btn" class="filterbtn" type="button" value="RESET" />
+    <input id="filter_btn" class="filterbtn" type="button" value="FILTER" />
+    <img id="filter_arrow" src="uploads\icons\double-angle-pointing-to-right.png" class="arrow" alt="">
+  </div>
+
+  <div id="Cards_Container"></div>
+
+
+  <!-- footer-->
+  <footer>
+    <input id="loadData" class="loadbtn" type="button" value="Load More ..." />
+    <p>This site is not affiliated with Blizzard Entertainment, Inc.</p>
+    <p>Deigned by <a href="https://twitter.com/colomboise">@Colombois</a></p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+  <script src="js/main.js" type="text/javascript"></script>
+</body>
+
+</html>
