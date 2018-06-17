@@ -355,7 +355,7 @@ function goldenSwitch(cards_data){
     card_id = event.target.id;
     for (var i = 0; i < cards_data.length; i++) {
       if (card_id == cards_data[i].dbfId ) {
-      document.getElementById(card_id).src = 'uploads/golden_rel/'+ cards_data[i].id +"_premium.gif";
+      document.getElementById(card_id).src = 'uploads/rel/'+ cards_data[i].id +"_premium.gif";
       document.getElementById(card_id).classList.remove("card_img");
       document.getElementById(card_id).classList.add("card_imgGolden");
       }

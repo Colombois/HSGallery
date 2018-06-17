@@ -297,6 +297,7 @@ body {
 }
 
 .filterbtn{
+  -webkit-appearance: none;
   font-family: sans-serif;
   font-size: 11px;
   display: inline-block;
@@ -331,7 +332,7 @@ body {
 
 .card_imgGolden {
   margin: -10px 0 -15px 0;
-  height: 385px;
+  height: 388px;
   width: 269px;
 }
 #Cards_Container img:hover{
@@ -339,6 +340,7 @@ body {
 }
 
 .loadbtn{
+  -webkit-appearance: none;
   font-family: sans-serif;
   font-size: 12px;
   display: inline-block;
