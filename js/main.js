@@ -5,16 +5,16 @@ var mana_selected = -1;
 var rarity_selected = "";
 window.load = getData();
 /*Fetch calling the json */
-function getData() {
-  fetch('https://api.hearthstonejson.com/v1/24377/enUS/cards.collectible.json')
+function getData(res) {
+  fetch('https://api.hearthstonejson.com/v1/25252/enUS/cards.collectible.json')
     .then((res) => res.json())
     .then((data) => {
+     /*console.log(data);*/
       pageLoad(data);
       loadMore(data);
       filterData(data);
       resetFilter(data);
       searchEngine(data);
-      goldenSwitch(data);
     })
 }
 
@@ -29,7 +29,6 @@ function pageLoad(cardData) {
 
     }
   }
-  goldenSwitch(cardData);
 }
 
 /*Search function*/
@@ -49,7 +48,6 @@ function searchEngine(srch_data) {
         }
       }
     }
-    goldenSwitch(srch_data);
   }, false);
 }
 
@@ -343,25 +341,8 @@ function filterData(dataFilter) {
       }
 
     }
-    goldenSwitch(dataFilter);
-    /*  console.log(class_selected, mana_selected, rarity_selected, set_selected);*/
-  }, false);
-}
 
-/*Function to switch from normal cards to golden animation cards*/
-function goldenSwitch(cards_data){
-  var card_id = "";
-  $(".card_img").click(function(event){
-    card_id = event.target.id;
-    for (var i = 0; i < cards_data.length; i++) {
-      if (card_id == cards_data[i].dbfId ) {
-      document.getElementById(card_id).src = 'uploads/rel/'+ cards_data[i].id +"_premium.gif";
-      document.getElementById(card_id).classList.remove("card_img");
-      document.getElementById(card_id).classList.add("card_imgGolden");
-      }
-    }
-        console.log(card_id);
-  })
+  }, false);
 }
 
 /*Reset filter button click calling CreateHTML function */
@@ -416,7 +397,6 @@ function loadMore(btndata) {
         myhtml.innerHTML += images;
       }
     }
-    goldenSwitch(btndata);
     set_index++;
     console.log(setarray[set_index - 1]);
   }, false);
