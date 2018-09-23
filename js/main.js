@@ -28,7 +28,7 @@ function getData() {
     var class_Array = ["DRUID","HUNTER","MAGE","PALADIN","PRIEST","ROGUE","SHAMAN","WARLOCK","WARRIOR", "NEUTRAL"];
     for (var i = 0; i < cardData.length; i++) {
       if (cardData[i].set == "BOOMSDAY") {
-        images = '<img class="card_img" id="' + cardData[i].dbfId + '" src="' + 'uploads/rel/' + cardData[i].dbfId + '.png' + '"/>';
+        images = '<img class="card_img" id="' + cardData[i].dbfId + '" src="' + 'uploads/rel/' + cardData[i].dbfId + '.png' + '" alt="' + cardData[i].name + '"/>';
         myhtml.innerHTML += images;
 
       }
@@ -47,7 +47,7 @@ function getData() {
       } else {
         for (var i = 0; i < srch_data.length; i++) {
           if (srch_data[i].name.toLowerCase().includes(boxValue) || srch_data[i].name.includes(boxValue) || srch_data[i].id.includes(boxValue)) {
-            srch_img = '<img class="card_img" id="' + srch_data[i].dbfId + '" src="' + 'uploads/rel/' + srch_data[i].dbfId + '.png' + '"/>';
+            srch_img = '<img class="card_img" id="' + srch_data[i].dbfId + '" src="' + 'uploads/rel/' + srch_data[i].dbfId + '.png' + '" alt="' + srch_data[i].name + '"/>';
             myhtml.innerHTML += srch_img;
           }
         }
@@ -203,18 +203,18 @@ function getData() {
 
         /*Class only*/
         if (cards_Array[i].cardClass == class_selected && mana_selected == -1 && rarity_selected == "" && set_selected == "") {
-          filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+          filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
           myhtml.innerHTML += filtered_image;
         }
         /* Class + Rarity*/
         if (cards_Array[i].cardClass == class_selected && mana_selected == -1 && cards_Array[i].rarity == rarity_selected && set_selected == "") {
-          filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+          filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
           myhtml.innerHTML += filtered_image;
         }
 
         /* Class + Set*/
         if (cards_Array[i].cardClass == class_selected && mana_selected == -1 && rarity_selected == "" && cards_Array[i].set == set_selected) {
-          filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+          filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
           myhtml.innerHTML += filtered_image;
         }
 
@@ -222,12 +222,12 @@ function getData() {
         /*Class + Mana*/
         if (mana_selected == 7) {
           if (cards_Array[i].cardClass == class_selected && cards_Array[i].cost >= 7 && rarity_selected == "" && set_selected == "") {
-            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
             myhtml.innerHTML += filtered_image;
           }
         } else {
           if (cards_Array[i].cardClass == class_selected && cards_Array[i].cost == mana_selected && rarity_selected == "" && set_selected == "") {
-            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
             myhtml.innerHTML += filtered_image;
           }
         }
@@ -235,12 +235,12 @@ function getData() {
         /*Class + Mana + Rarity*/
         if (mana_selected == 7) {
           if (cards_Array[i].cardClass == class_selected && cards_Array[i].cost >= 7 && cards_Array[i].rarity == rarity_selected && set_selected == "") {
-            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
             myhtml.innerHTML += filtered_image;
           }
         } else {
           if (cards_Array[i].cardClass == class_selected && cards_Array[i].cost == mana_selected && cards_Array[i].rarity == rarity_selected && set_selected == "") {
-            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
             myhtml.innerHTML += filtered_image;
           }
         }
@@ -248,30 +248,30 @@ function getData() {
         /*Class + Mana + Set*/
         if (mana_selected == 7) {
           if (cards_Array[i].cardClass == class_selected && cards_Array[i].cost >= 7 && rarity_selected == "" && cards_Array[i].set == set_selected) {
-            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
             myhtml.innerHTML += filtered_image;
           }
         } else {
           if (cards_Array[i].cardClass == class_selected && cards_Array[i].cost == mana_selected && rarity_selected == "" && cards_Array[i].set == set_selected) {
-            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
             myhtml.innerHTML += filtered_image;
           }
         }
         /* Class + Set + Rarity*/
         if (cards_Array[i].cardClass == class_selected && mana_selected == -1 && cards_Array[i].rarity == rarity_selected && cards_Array[i].set == set_selected) {
-          filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+          filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
           myhtml.innerHTML += filtered_image;
         }
 
         /*Class + Mana + Rarity + Sets*/
         if (mana_selected == 7) {
           if (cards_Array[i].cardClass == class_selected && cards_Array[i].cost >= 7 && cards_Array[i].rarity == rarity_selected && cards_Array[i].set == set_selected) {
-            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
             myhtml.innerHTML += filtered_image;
           }
         } else {
           if (cards_Array[i].cardClass == class_selected && cards_Array[i].cost == mana_selected && cards_Array[i].rarity == rarity_selected && cards_Array[i].set == set_selected) {
-            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
             myhtml.innerHTML += filtered_image;
           }
         }
@@ -279,12 +279,12 @@ function getData() {
         /*Mana*/
         if (mana_selected == 7) {
           if (class_selected == "" && cards_Array[i].cost >= 7 && rarity_selected == "" && set_selected == "") {
-            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
             myhtml.innerHTML += filtered_image;
           }
         } else {
           if (class_selected == "" && cards_Array[i].cost == mana_selected && rarity_selected == "" && set_selected == "") {
-            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
             myhtml.innerHTML += filtered_image;
           }
         }
@@ -292,12 +292,12 @@ function getData() {
         /*Mana + Rarity*/
         if (mana_selected == 7) {
           if (class_selected == "" && cards_Array[i].cost >= 7 && cards_Array[i].rarity == rarity_selected && set_selected == "") {
-            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
             myhtml.innerHTML += filtered_image;
           }
         } else {
           if (class_selected == "" && cards_Array[i].cost == mana_selected && cards_Array[i].rarity == rarity_selected && set_selected == "") {
-            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
             myhtml.innerHTML += filtered_image;
           }
         }
@@ -305,12 +305,12 @@ function getData() {
         /*Mana + Set*/
         if (mana_selected == 7) {
           if (class_selected == "" && cards_Array[i].cost >= 7 && rarity_selected == "" && cards_Array[i].set == set_selected) {
-            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
             myhtml.innerHTML += filtered_image;
           }
         } else {
           if (class_selected == "" && cards_Array[i].cost == mana_selected && rarity_selected == "" && cards_Array[i].set == set_selected) {
-            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
             myhtml.innerHTML += filtered_image;
           }
         }
@@ -318,29 +318,29 @@ function getData() {
         /*Mana + Rarity +Set*/
         if (mana_selected == 7) {
           if (class_selected == "" && cards_Array[i].cost >= 7 && cards_Array[i].rarity == rarity_selected && cards_Array[i].set == set_selected) {
-            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
             myhtml.innerHTML += filtered_image;
           }
         } else {
           if (class_selected == "" && cards_Array[i].cost == mana_selected && cards_Array[i].rarity == rarity_selected && cards_Array[i].set == set_selected) {
-            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+            filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
             myhtml.innerHTML += filtered_image;
           }
         }
         /*sets*/
         if (class_selected == "" && mana_selected == -1 && rarity_selected == "" && cards_Array[i].set == set_selected) {
-          filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+          filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
           myhtml.innerHTML += filtered_image;
         }
 
         /*Rarity*/
         if (class_selected == "" && mana_selected == -1 && cards_Array[i].rarity == rarity_selected && set_selected == "") {
-          filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+          filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
           myhtml.innerHTML += filtered_image;
         }
         /*Rarity + Set*/
         if (class_selected == "" && mana_selected == -1 && cards_Array[i].rarity == rarity_selected && cards_Array[i].set == set_selected) {
-          filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '"/>';
+          filtered_image = '<img class="card_img" id="' + cards_Array[i].dbfId + '" src="' + 'uploads/rel/' + cards_Array[i].dbfId + '.png' + '" alt="' + cards_Array[i].name + '"/>';
           myhtml.innerHTML += filtered_image;
         }
 
@@ -397,7 +397,7 @@ function getData() {
 
       for (var i = 0; i < btndata.length; i++) {
         if (btndata[i].set == setarray[set_index]) {
-          images = '<img class="card_img" id="' + btndata[i].dbfId + '" src="' + 'uploads/rel/' + btndata[i].dbfId + '.png' + '"/>';
+          images = '<img class="card_img" id="' + btndata[i].dbfId + '" src="' + 'uploads/rel/' + btndata[i].dbfId + '.png' + '" alt="' + btndata[i].name + '"/>';
           myhtml.innerHTML += images;
         }
       }
