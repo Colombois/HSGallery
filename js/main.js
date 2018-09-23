@@ -39,6 +39,8 @@ function getData() {
   function searchEngine(srch_data) {
     document.getElementById("search_card").addEventListener("change", function() {
       myhtml.innerHTML = "";
+      $("#loadData").removeClass("loadbtn");
+      $("#loadData").addClass("hide");
       var boxValue = document.getElementById("search_card").value;
       var srch_img = '';
       if (boxValue == "" || boxValue == undefined) {
@@ -194,7 +196,7 @@ function getData() {
 
     document.getElementById("filter_btn").addEventListener("click", function() {
       myhtml.innerHTML = "";
-      $("#loadData").removeClass("filterbtn");
+      $("#loadData").removeClass("loadbtn");
       $("#loadData").addClass("hide");
       var cards_Array = dataFilter;
       var filtered_image = "";

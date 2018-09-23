@@ -323,8 +323,9 @@ body {
 }
 
 #Cards_Container{
-  min-height: 800px;
+  /*min-height: 800px;*/
   text-align: center;
+  padding: 10px;
 }
 .card_img{
   height: 350px;
