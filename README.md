@@ -1,2 +1,2 @@
-# hearthstonegallery
-Hearthstone Gallery
+# Hearthstonegallery.com
+
